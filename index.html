@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orhids</title>
+    <style>
+      body {
+        background: #e1f5fe;
+        font-family: "Times New Roman", Times, serif;
+      }
+      h1 {
+        color: #e09ba3;
+        font-size: 35px;
+        font-weight: 800;
+        padding: 5px;
+        text-align: center;
+      }
+      h2 {
+        color: #e09ba3;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 30px 0px;
+        opacity: 0.8;
+        text-align: center;
+      }
+      h3 {
+        color: #8a8b45;
+        margin-block-start: 0em;
+        margin-bottom: 1.5em;
+        text-align: center;
+      }
+      img {
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-inline-start: 3.5em;
+        margin-inline-end: 3.5em;
+        text-align: justify;
+      }
+      ul {
+        list-style: none;
+        margin-bottom: 0em;
+        padding: 0em;
+        text-align: center;
+      }
+      li {
+        display: inline;
+        margin: 1em;
+      }
+      .container {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 60px;
+      }
+      .phalaenopsis,
+      .cattleya,
+      .vanda {
+        color: #ebac30;
+      }
+      .readAboutOrhids {
+        color: #b8396c;
+        text-decoration: none;
+      }
+      .readAboutOrhids:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .species {
+        border: 1px solid #8a8b45;
+        border-radius: 20px;
+        margin-top: 2.5em;
+        margin-bottom: 1.5em;
+        margin-inline-start: 4em;
+        margin-inline-end: 4em;
+        padding: 1.5em 0em;
+      }
+      .phalaenopsis:hover,
+      .cattleya:hover,
+      .vanda:hover {
+        color: #b8396c;
+        zoom: 125%;
+      }
+      button {
+        background: #8a8b45;
+        border: 3px solid #b8396c;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgb(183, 177, 177);
+        color: #ebac30;
+        display: block;
+        font-size: 18px;
+        font-weight: bolder;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        opacity: 0.6;
+        padding: 20px;
+        transition: all 250ms ease-in-out;
+      }
+      button:hover {
+        background: #ebac30;
+        border: 3px solid #b8396c;
+        color: #8a8b45;
+        cursor: pointer;
+        opacity: 0.6;
+      }
+      .codder {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <hr />
+      <h1>ORCHIDACEAE</h1>
+      <hr />
+      <div class="page-content">
+        <h2>one of the largest and most diverse groups of flowering plants</h2>
+        <img
+          src="https://p4.wallpaperbetter.com/wallpaper/78/836/907/pink-tenderness-orchid-wallpaper-preview.jpg"
+          alt="Orhids image"
+        />
+        <br />
+        <p>
+          <a
+            class="readAboutOrhids"
+            href="https://en.wikipedia.org/wiki/Orchidaceae"
+            target="_blank"
+            >Orchidaceae</a
+          >
+          , commonly called the orchid family, is a diverse and widespread
+          family of flowering plants, with blooms that are often colourful and
+          fragrant. Along with the Asteraceae, they are one of the two largest
+          families of flowering plants.
+        </p>
+        <div class="species">
+          <h3>Most popular species of orhids</h3>
+          <ul>
+            <li>
+              <a
+                class="phalaenopsis"
+                href="https://www.orchidweb.com/phalaenopsis-orchid-care"
+                target="_blank"
+              >
+                Phalaenopsis
+              </a>
+            </li>
+            <li>
+              <a
+                class="cattleya"
+                href="https://www.orchidweb.com/cattleya-orchid-care"
+                target="_blnk"
+              >
+                Cattleya
+              </a>
+            </li>
+            <li>
+              <a
+                class="vanda"
+                href="https://www.orchidweb.com/vanda-orchid-care"
+                target="_blank"
+              >
+                Vanda
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button>👉 Win a discount voucher</button>
+        <div class="codder">Coded by Iulia 🙂</div>
+      </div>
+    </div>
+    <script>
+      function winAspecialOrhid() {
+        let result = document.querySelector(".page-content");
+        let name = prompt("What is your name?");
+        name = name.trim();
+        name = name.charAt(0).toUpperCase() + name.slice(1);
+        let email = prompt("Please enter your e-mail address");
+        email = email.trim();
+        let color = prompt("In which color does an orchid not bloom?");
+        color = color.trim();
+        let numberSpecies = prompt("How many orhid species exist?");
+        numberSpecies = numberSpecies.trim();
+        if (name.length < 1 || email.length < 1) {
+          alert("Please go back and provide the requested information.");
+        } else {
+          if (
+            (color === "blue" || color === "black") &&
+            numberSpecies > 25000 &&
+            numberSpecies < 35000
+          ) {
+            document.querySelector(
+              ".page-content"
+            ).innerHTML = `Congratulations, ${name}! You won a 30% discount voucher which you can use in one of our orchid farms or online.
+            We'll be in touch with you at ${email}.`;
+          } else {
+            document.querySelector(
+              ".page-content"
+            ).innerHTML = `Sorry, ${name}! You were not lucky today. Stay tuned for new actions!`;
+          }
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", winAspecialOrhid);
+    </script>
+  </body>
+</html>
